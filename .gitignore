@@ -1,0 +1,13 @@
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# VS Code settings (optional)
+.vscode/
+
+# OS and editor artifacts
+.DS_Store
+*.bak
+*.log
+*.zip
