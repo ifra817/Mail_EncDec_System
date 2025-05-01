@@ -1,5 +1,6 @@
 # main.py
 import sys
+import os
 from PyQt5.QtWidgets import QMainWindow, QApplication, QFileDialog, QMessageBox, QLineEdit, QTextEdit
 from PyQt5.QtCore import QTimer, Qt
 from gui import Ui_MainWindow
@@ -8,9 +9,13 @@ from cryptography_vernam import encrypt, decrypt, generate_random_key, evaluate_
 class MainApp(QMainWindow, Ui_MainWindow):
     
     def __init__(self):
+
+        BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+        bg_path = os.path.join(BASE_DIR, "IS_gui_bg.png")
         super().__init__()
         self.ui = Ui_MainWindow()
         self.ui.setupUi(self)
+        self.setStyleSheet(f"QMainWindow {{ background-image: url({bg_path}); background-repeat: no-repeat; background-position: center; }}")
 
         # Set the starting page to Loading page
         self.ui.stackedWidget.setCurrentWidget(self.ui.Loading_page)
