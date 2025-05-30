@@ -11,3 +11,6 @@ __pycache__/
 *.bak
 *.log
 *.zip
+
+encrypted_emails.txt
+decrypted_emails.txt
