@@ -27,11 +27,10 @@ class Ui_MainWindow(object):
         font.setWeight(50)
         self.stackedWidget.setFont(font)
         self.stackedWidget.setCursor(QtGui.QCursor(QtCore.Qt.ArrowCursor))
-        self.stackedWidget.setStyleSheet("background: url(IS_gui_bg.jpg);")
+        self.stackedWidget.setStyleSheet("background-image: url('IS_gui_bg.jpg');")
         self.stackedWidget.setObjectName("stackedWidget")
         self.Loading_page = QtWidgets.QWidget()
         self.Loading_page.setCursor(QtGui.QCursor(QtCore.Qt.WaitCursor))
-        self.Loading_page.setStyleSheet("background: url(IS_gui_bg.jpg);")
         self.Loading_page.setObjectName("Loading_page")
         self.progressBar = QtWidgets.QProgressBar(self.Loading_page)
         self.progressBar.setGeometry(QtCore.QRect(310, 590, 481, 51))
@@ -206,8 +205,8 @@ class Ui_MainWindow(object):
         font.setWeight(75)
         self.checkBox.setFont(font)
         self.checkBox.setStyleSheet("color: white;\n"
-"background: transparent;\n"
-"")
+"background: transparent;"
+)
         self.checkBox.setObjectName("checkBox")
         self.body = QtWidgets.QTextEdit(self.Encryption_page)
         self.body.setGeometry(QtCore.QRect(190, 220, 811, 241))
@@ -267,8 +266,7 @@ class Ui_MainWindow(object):
         font.setBold(True)
         font.setWeight(75)
         self.CipherText_label.setFont(font)
-        self.CipherText_label.setStyleSheet("color: white;\n"
-"")
+        self.CipherText_label.setStyleSheet("color: white;")
         self.CipherText_label.setObjectName("CipherText_label")
         self.decryption_key_label = QtWidgets.QLabel(self.Decryption_page)
         self.decryption_key_label.setGeometry(QtCore.QRect(120, 490, 111, 41))
@@ -318,7 +316,6 @@ class Ui_MainWindow(object):
         self.clear_button_2.setObjectName("clear_button_2")
         self.stackedWidget.addWidget(self.Decryption_page)
         self.Display_Result = QtWidgets.QWidget()
-        self.Display_Result.setStyleSheet("IS_gui_bg.jpg);")
         self.Display_Result.setObjectName("Display_Result")
         self.result_label = QtWidgets.QLabel(self.Display_Result)
         self.result_label.setGeometry(QtCore.QRect(460, 90, 271, 61))

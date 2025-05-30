@@ -12,10 +12,11 @@ class MainApp(QMainWindow, Ui_MainWindow):
 
         BASE_DIR = os.path.dirname(os.path.abspath(__file__))
         bg_path = os.path.join(BASE_DIR, "IS_gui_bg.png")
+
         super().__init__()
         self.ui = Ui_MainWindow()
         self.ui.setupUi(self)
-        self.setStyleSheet(f"QMainWindow {{ background-image: url({bg_path}); background-repeat: no-repeat; background-position: center; }}")
+        #self.setStyleSheet(f"QMainWindow {{ background-image: url('{bg_path}'); background-repeat: no-repeat; background-position: center; }}")
 
         # Set the starting page to Loading page
         self.ui.stackedWidget.setCurrentWidget(self.ui.Loading_page)
@@ -71,7 +72,6 @@ class MainApp(QMainWindow, Ui_MainWindow):
         self.ui.CipherText_here.clear()
         self.ui.decryption_key.clear()
 
-
     def generate_key(self):
         subject_text = self.ui.subject.text()
         body_text = self.ui.body.toPlainText()
@@ -94,7 +94,6 @@ class MainApp(QMainWindow, Ui_MainWindow):
         if not subject or not body or not key:
             QMessageBox.warning(self, "Error", "Email Subject and Body are required!")
             return
-        print(f"Plaintext length: {len(plaintext)}, Key length: {len(key)}")
 
         try:
             encrypted = encrypt(plaintext, key)
