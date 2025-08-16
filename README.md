@@ -1,4 +1,4 @@
-# Mail_EncDec_System 🔐✉️
+# Email Encryption Decryption System 🔐✉️
 
 A Python-based GUI application to **encrypt** and **decrypt** emails using the **Vernam Cipher**.  
 This tool allows users to input an email's **subject and body**, generate a one-time key, encrypt/decrypt messages, and **safely store** results.
